@@ -18,7 +18,7 @@ def get_mem(value):
         s['endpoint'] = host
         s['metric'] = 'mem_' + str(value)
         s['timestamp'] = ts
-        s['step']= 60
+        s['step']= 300
         s['value'] = float(os.popen(mem_cmd).read().strip())
         s['counterType'] = 'GAUGE'
         s['tags'] =  ''
@@ -31,7 +31,7 @@ def get_cpu(value):
         s['endpoint'] = host
         s['metric'] = 'cpu_' + str(value)
         s['timestamp'] = ts
-        s['step']= 60
+        s['step']= 300
         s['value'] = float(os.popen(cpu_cmd).read().strip())
         s['counterType'] = 'GAUGE'
         s['tags'] =  ''
