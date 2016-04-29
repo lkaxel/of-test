@@ -28,4 +28,4 @@ for te in Core:
 	get_temperature(float(te.strip('\n')))
 	i += 1
 #print Core
-print json.dumps(data)
+print (json.dumps(data))
